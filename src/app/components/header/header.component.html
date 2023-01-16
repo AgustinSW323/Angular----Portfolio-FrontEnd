@@ -1,0 +1,32 @@
+<header class="topheader">
+    <nav class="topnav">
+        <a href="#" class="logo">
+            <div>
+                Portfolio Web
+            </div>
+        </a>
+        <button 
+            (click)="setOpened()"
+            class="open-menu"
+            aria-label="Abrir menú"
+            >
+            <img src="./assets/Img/align-justify-svgrepo-com.svg" alt="">
+        </button>
+        <ul 
+        class="menu"
+        [ngClass]=" {'menu_opened':active} "
+        >
+            <button 
+                (click)="setClosed()"
+                class="close-menu"
+                aria-label="Cerrar menú"
+                >
+                <img src="./assets/Img/x-lg-svgrepo-com.svg" alt="cerrar menú">
+            </button>
+            <li><a (click)="setClosed()" href="#quienSoy">¿Quién soy?</a></li>
+            <li><a (click)="setClosed()" href="#educación">Educación</a></li>
+            <li><a (click)="setClosed()" href="#habilidades">Habilidades</a></li>
+            <li><a (click)="setClosed()" href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+</header>

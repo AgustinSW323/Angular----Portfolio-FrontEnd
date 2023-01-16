@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root{
+    --theme-color:white;
+    --primary-color:#124f88;
+    --secondary-color:#F7C331;
+    --text-color-inverse:white;
+    --text-color:black;
+    --navbar-shallow-color:#e5e5e5;
+    --menu-mobile-background-color:#3A4460;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--theme-color);
+    color:var(--text-color);
+}
+a{
+    text-decoration: none;
+    color:var(--text-color);
+}
+
+.horizontal-padding{
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.vertical-padding{
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media(min-width:950px){
+    .horizontal-padding{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    
+    .vertical-padding{
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+}
