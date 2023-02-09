@@ -1,0 +1,16 @@
+<div class="education-grid education">
+    <div class="studied">
+
+        <div class="studied-date">{{education.date}}
+            <fa-icon
+             *ngIf="visibleIcon"
+             class="X" 
+             [icon]="faTimes"
+             (click)="onDelete(education)"
+            ></fa-icon>
+        </div>
+        <div class="studied-place">{{education.place}}</div>
+        <div class="studied-degree-title">{{education.certification}}</div>
+        <div class="studied-description">{{education.description}}</div>
+    </div>
+</div>

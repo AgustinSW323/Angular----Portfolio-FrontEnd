@@ -1,8 +1,25 @@
 <div class="horizontal-padding vertical-padding" id="habilidades">
     <section class="skills">
-        <h2 class="skills-title">Habilidades</h2>
-        <ul class="skills-list">
-            <li class="skills-skill">Habilidad 1</li>
-            <li class="skills-skill">Habilidad 2</li>
-            <li class="skills-skill">Habilidad 3</li>
-            <li class="skills-skill">Habilidad 4</li>
+        <h2 class="skills-title">Habilidades
+            <app-button 
+                *ngIf="visible"
+                class="buttonApp"
+                text="{{showAddSkill ? 'Cerrar' : 'Agregar'}}"
+                (btnClick)="toggleAddSkill()"
+                
+            ></app-button>
+        </h2>
+        <app-add-skill
+
+            (onAddSkill)="addSkill($event)"
+        
+        ></app-add-skill>
+        <app-skills-item
+            [visibleIcon]="visible"
+            *ngFor="let skill of skills"
+            [skill] = "skill"
+            (onDeleteSkill) = "deleteSkill(skill)"
+        >
+        </app-skills-item>
+    </section>
+</div>

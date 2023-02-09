@@ -1,0 +1,53 @@
+<form 
+    class="add-form" 
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAddEducation"
+>
+    
+    <div class="form-control">
+        <label for="text">Fecha </label>
+        <input 
+            type="text" 
+            name="date" 
+            id="date" 
+            placeholder="2013-2017"
+            [(ngModel)]="date" 
+        >
+    </div>
+
+    <div class="form-control">
+        <label for="text">Lugar </label>
+        <input 
+            type="text" 
+            name="place" 
+            id="place" 
+            placeholder="ISEP"
+            [(ngModel)]="place" 
+        >
+    </div>
+
+    <div class="form-control">
+        <label for="text">Titulo </label>
+        <input 
+            type="text" 
+            name="certification" 
+            id="certification" 
+            placeholder="Administración en Nuevas Tecnologías"
+            [(ngModel)]="certification" 
+        >
+    </div>
+
+    <div class="form-control">
+        <label for="text">Descripción </label>
+        <textarea 
+            type="text" 
+            required name="description" 
+            id="description" 
+            rows="6" 
+            placeholder="Lorem ipsum dolor sit amet consectetur adipisicing..."
+            [(ngModel)]="description" 
+        ></textarea>
+    </div>
+
+    <button type="submit" value="Save Skill" class="education-form-submit">Guardar Habilidad</button>
+</form>

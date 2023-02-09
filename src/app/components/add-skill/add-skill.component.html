@@ -1,0 +1,17 @@
+<form 
+    class="add-form" 
+    (ngSubmit)="onSubmit()"
+    *ngIf="showAddSkill"
+>
+    <div class="form-control">
+        <label for="text">Habilidad </label>
+        <input 
+            type="text" 
+            name="name" 
+            id="name" 
+            placeholder="Python"
+            [(ngModel)]="name" 
+        ></div>
+
+    <button type="submit" value="Save Skill" class="skill-form-submit">Guardar Habilidad</button>
+</form>

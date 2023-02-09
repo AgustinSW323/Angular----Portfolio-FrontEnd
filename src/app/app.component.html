@@ -1,5 +1,34 @@
+
 <app-header></app-header>
 <app-profile></app-profile>
-<app-education></app-education>
-<app-skills></app-skills>
+<app-education [visible]="login"></app-education>
+<app-skills [visible]="login"></app-skills>
 <app-contact></app-contact>
+<div class="allLogin"> 
+    <button class="loginBtn" 
+        *ngIf="!login"
+        (click)="loginBTN = !loginBTN"
+    >Iniciar Sesión
+    </button>
+    <button class="loginBtn"
+        *ngIf="login"
+        (click)="login=false"
+        
+    >Cerrar Sesión: {{email}}
+    </button>
+    <div *ngIf="loginBTN" class="horizontal-padding vertical-padding">
+        <section *ngIf="!login" class="login" id="login">
+            <form class="login-form">
+                <div class="login-form-group">
+                    <label for="name">Email</label>
+                    <input #mail required type="email" name="FORMemail" id="FORMemail">
+                </div>
+                <div class="login-form-group">
+                    <label for="password">Contraseña</label>
+                    <input #pass required type="password" name="FORMpassword" id="FORMpassword">
+                </div>
+                <button type="submit" class="login-form-submit" (click)="getValue(mail.value, pass.value)"> Acceder </button>
+            </form>
+        </section>
+    </div>
+</div>

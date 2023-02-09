@@ -1,0 +1,18 @@
+<div>
+    <section>
+        <ul class="skills-list">
+            <li class="skills-skill">
+             {{skill.name}}
+            
+                <fa-icon
+                *ngIf="visibleIcon"
+                class="X"
+                [icon]="faTimes"
+                [ngStyle] = "{'color':'red'}"
+                (click)="onDelete(skill)" >
+                </fa-icon>
+                
+            </li>
+        </ul>
+    </section>
+</div>

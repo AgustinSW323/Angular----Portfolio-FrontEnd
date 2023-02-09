@@ -1,0 +1,27 @@
+.edit-btn{
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: none;
+    font-size: 11px;
+    padding: 0.5em 1em;
+    border-radius: 10em;
+    cursor:pointer;
+    position:absolute;
+
+}
+
+.edit-btn:hover{
+    filter: brightness(110%);
+}
+
+@media (min-width: 950px){
+
+    .edit-btn{
+        font-size: 15px;
+        padding: 0.5em 1em;
+    }
+    
+    .edit-btn:hover{
+        filter: brightness(110%);
+    } 
+}
