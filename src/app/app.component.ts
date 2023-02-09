@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input} from '@angular/core';
 import { UserData } from './UserData';
 import { USERData } from './mock-userData';
 
@@ -16,26 +16,17 @@ export class AppComponent {
   loginBTN: boolean = false;
 
   email: string = '';
-  password: string = '';
 
   getValue(val:string, val2:string){
-    console.log(val)
     if(val == this.userData.email && val2 == this.userData.password){
       this.email = val;
-      this.password = val2;
+      this.login = true;
     } 
 
-    if(val !== this.userData.email){
+    else {
       this.email = "invalid";
-      this.password = "invalid";
-    }
-    
-    if(this.email == this.userData.email && this.password == this.userData.password){
-      this.login = true;
-    }
-
-    if(this.email !== this.userData.email || this.password !== this.userData.password){
       this.login = false;
+      return alert("Combinación no válida de correo electrónico y contraseña")
     }
   }
 
