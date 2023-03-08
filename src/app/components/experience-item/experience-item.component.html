@@ -1,0 +1,16 @@
+<div class="experience-grid experience">
+    <div class="experienced">
+        <div class="experienced-date">{{experience.date}}
+            <fa-icon
+             *ngIf="visibleIcon"
+             class="X" 
+             [icon]="faTimes"
+             (click)="onDelete(experience)"
+            ></fa-icon>
+        </div>
+        <div class="experienced-place">{{experience.company}}</div>
+        <div class="experienced-degree-title">{{experience.position}}</div>
+        <div class="experienced-description">{{experience.description}}</div>
+    </div>
+</div>
+

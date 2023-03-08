@@ -2,6 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Skill } from "../../Skill";
 import { SKILLS } from "../../mock-skills"
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faPencil } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-skills-item',
@@ -16,6 +17,14 @@ export class SkillsItemComponent implements OnInit {
   @Input() visibleIcon: boolean = false;
 
   faTimes = faTimes
+  faPencil = faPencil
+
+  edit: boolean = true;
+
+  changeSkill(val:string){
+    this.skill.name = val
+    console.log(val);
+  }
 
   constructor() { }
 
@@ -28,6 +37,10 @@ export class SkillsItemComponent implements OnInit {
 
   onToggle(skill:Skill){
     this.onToggleReminder.emit(skill);
+  }
+
+  onEdit(){
+    this.edit = !this.edit
   }
   
 }

@@ -1,0 +1,88 @@
+.add-form{
+    background-color: var(--primary-color);
+    color: var(--text-color-inverse);
+    font-size:18px;
+    border-radius:14px;
+    padding: 25px;
+
+    display: grid;
+    gap:25px;
+}
+
+.add-form label{
+    margin: 0;
+    padding: 0;
+}
+
+.add-form{
+    display: grid;
+    gap: 20px;
+}
+
+.form-control{
+    display: grid;
+    gap: 3px;
+}
+
+.add-form label{
+    font-weight: 500;
+}
+.add-form textarea{
+    border-radius: 7px;
+    border:none;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+.add-form input{
+    border-radius: 7px;
+    border:none;
+    height: 30px;
+    padding: 5px 10px;
+    height: auto;
+    resize: vertical;
+}
+
+.add-form textarea{
+    height: auto;
+    resize: vertical;
+}
+
+.experience-form-submit{
+    width: 100%;
+    height: 50px;
+
+    background-color: var(--text-color);
+    border-radius: 7px;
+    color: var(--text-color-inverse);
+    border: 1px solid var(--theme-color);
+
+    cursor: pointer;
+}
+
+.experience-form-submit:hover{
+    box-shadow: 0 0 14px var(--secondary-color);
+}
+
+@media (min-width: 950px){
+    .add-form{
+        font-size:20px;
+        padding: 70px;
+        max-width: 600px;
+        margin: 0 auto;
+
+        box-sizing: border-box;
+    }
+
+    .add-form{
+        grid-area: form;
+    }
+
+    .add-form{
+        padding: 0;
+        max-width: 960px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        padding: 1.5em 1.7em;
+    }
+}

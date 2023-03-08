@@ -3,16 +3,35 @@
         <ul class="skills-list">
             <li class="skills-skill">
              {{skill.name}}
-            
                 <fa-icon
+   
+                *ngIf="visibleIcon"
+                class="editBTN"
+                [icon]="faPencil"
+                (click)="onEdit()"
+
+                ></fa-icon>
+                <fa-icon
+
                 *ngIf="visibleIcon"
                 class="X"
                 [icon]="faTimes"
                 [ngStyle] = "{'color':'red'}"
-                (click)="onDelete(skill)" >
-                </fa-icon>
+                (click)="onDelete(skill)"
+                ></fa-icon>
                 
             </li>
         </ul>
+    </section>
+</div>
+<div>
+    <section *ngIf="edit">
+        <form class="login-form">
+            <div class="login-form-group">
+                <label for="name"></label>
+                <input #skillEdit placeholder="{{skill.name}}">
+                <button type="submit" (click)="changeSkill(skillEdit.value)">enviar</button>
+            </div>
+        </form>
     </section>
 </div>

@@ -1,10 +1,11 @@
 
 <app-header></app-header>
 <app-profile></app-profile>
+<app-experience [visible]="login"></app-experience>
 <app-education [visible]="login"></app-education>
 <app-skills [visible]="login"></app-skills>
 <app-contact></app-contact>
-<div class="allLogin"> 
+<div class="allLogin" id="IS"> 
     <button class="loginBtn" 
         *ngIf="!login"
         (click)="loginBTN = !loginBTN"

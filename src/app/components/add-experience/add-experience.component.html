@@ -1,7 +1,7 @@
 <form 
     class="add-form" 
     (ngSubmit)="onSubmit()"
-    *ngIf="showAddEducation"
+    *ngIf="showAddExperience"
 >
     
     <div class="form-control">
@@ -16,24 +16,24 @@
     </div>
 
     <div class="form-control">
-        <label for="text">Lugar </label>
+        <label for="text">Compañía</label>
         <input 
             type="text" 
-            name="place" 
-            id="place" 
-            placeholder="ISEP"
-            [(ngModel)]="place" 
+            name="company" 
+            id="company" 
+            placeholder="Company"
+            [(ngModel)]="company" 
         >
     </div>
 
     <div class="form-control">
-        <label for="text">Titulo </label>
+        <label for="text">Posición</label>
         <input 
             type="text" 
-            name="certification" 
-            id="certification" 
-            placeholder="Administración en Nuevas Tecnologías"
-            [(ngModel)]="certification" 
+            name="position" 
+            id="position" 
+            placeholder="Position"
+            [(ngModel)]="position" 
         >
     </div>
 
@@ -49,5 +49,5 @@
         ></textarea>
     </div>
 
-    <button type="submit" value="Save Skill" class="education-form-submit">Guardar Educación</button>
+    <button type="submit" value="Save Skill" class="experience-form-submit">Guardar Experiencia</button>
 </form>

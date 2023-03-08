@@ -1,0 +1,25 @@
+<section class="experience" id="experiencia">
+    <div class="experience-body">
+        <h2 class="experience-title">Experiencia
+            <app-button 
+                *ngIf="visible"
+                text= "{{showAddExperience ? 'Cerrar' : 'Agregar'}}"
+                (btnClick)="toggleAddExperience()"
+            ></app-button></h2>
+            <app-add-experience
+            
+            (onAddExperience)="addExperience($event)"
+            
+            ></app-add-experience>            
+        
+        <div class="experience-grid">
+            <app-experience-item 
+                [visibleIcon]="visible"
+                *ngFor="let experience of experiences"
+                [experience] = "experience"
+                (onDeleteExperience) = "deleteExperience(experience)"
+            >
+            </app-experience-item>
+        </div>
+    </div>
+</section>
