@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Experience } from '../../Experience'
 import { UiService } from 'src/app/service/ui.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-add-experience',
@@ -27,7 +28,13 @@ export class AddExperienceComponent {
 
   onSubmit(){
     if(!this.date || !this.company || !this.position || !this.description){
-      alert("¡Por favor rellena todos los datos!")
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos vacios',
+        text: '¡Por favor rellena todos los datos!',
+        confirmButtonColor: 'var(--primary-color)',
+        iconColor: 'var(--secondary-color)'
+      })
       return
     }
     const{date, company, position, description} = this

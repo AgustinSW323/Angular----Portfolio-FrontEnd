@@ -2,6 +2,7 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Skill } from '../../Skill';
 import { UiService } from 'src/app/service/ui.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -25,7 +26,12 @@ export class AddSkillComponent {
 
   onSubmit(){
     if(!this.name){
-      alert("¡Por favor agrega una habilidad!")
+      Swal.fire({
+        icon: 'warning',
+        text: '¡Por favor agrega una habilidad!',
+        confirmButtonColor: 'var(--primary-color)',
+        iconColor: 'var(--secondary-color)'
+      })
       return
     }
 

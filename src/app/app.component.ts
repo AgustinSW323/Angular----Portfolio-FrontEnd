@@ -1,6 +1,7 @@
 import { Component, Input} from '@angular/core';
 import { UserData } from './UserData';
 import { USERData } from './mock-userData';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +27,13 @@ export class AppComponent {
     else {
       this.email = "invalid";
       this.login = false;
-      return alert("Combinación no válida de correo electrónico y contraseña")
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Combinación de correo electrónico y contraseña inválida',
+        footer: 'Inténtalo nuevamente',
+        confirmButtonColor: 'var(--primary-color)'
+      })
     }
   }
 

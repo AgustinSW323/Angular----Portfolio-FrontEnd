@@ -2,6 +2,8 @@ import { Component, Output, EventEmitter } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Education } from '../../Education'
 import { UiService } from 'src/app/service/ui.service';
+import Swal from 'sweetalert2';
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-add-education',
@@ -27,7 +29,13 @@ export class AddEducationComponent {
 
   onSubmit(){
     if(!this.date || !this.place || !this.certification || !this.description){
-      alert("¡Por favor rellena todos los datos!")
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos vacios',
+        text: '¡Por favor rellena todos los datos!',
+        confirmButtonColor: 'var(--primary-color)',
+        iconColor: 'var(--secondary-color)'
+      })
       return
     }
     const{date, place, certification, description} = this

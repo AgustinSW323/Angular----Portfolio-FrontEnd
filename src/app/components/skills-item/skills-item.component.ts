@@ -19,7 +19,7 @@ export class SkillsItemComponent implements OnInit {
   faTimes = faTimes
   faPencil = faPencil
 
-  edit: boolean = true;
+  edit: boolean = false;
 
   changeSkill(val:string){
     this.skill.name = val
