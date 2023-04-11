@@ -1,6 +1,7 @@
 export interface Education {
     id?: number;
-    date:string;
+    dateIni:string;
+    dateFin:string;
     place:string;
     certification:string;
     description:string

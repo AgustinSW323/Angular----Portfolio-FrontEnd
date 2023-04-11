@@ -1,6 +1,7 @@
 export interface Experience {
     id?: number;
-    date:string;
+    dateIni:string;
+    dateFin:string;
     company:string;
     position:string;
     description:string

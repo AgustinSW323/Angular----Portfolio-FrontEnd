@@ -12,7 +12,8 @@ import Swal from 'sweetalert2';
 export class AddExperienceComponent {
   @Output() onAddExperience: EventEmitter<Experience> = new EventEmitter();
 
-  date: string = ""
+  dateIni: string = ""
+  dateFin: string = ""
   company: string = ""
   position: string = ""
   description: string = ""
@@ -27,7 +28,7 @@ export class AddExperienceComponent {
    }
 
   onSubmit(){
-    if(!this.date || !this.company || !this.position || !this.description){
+    if(!this.dateIni || !this.company || !this.position || !this.description){
       Swal.fire({
         icon: 'warning',
         title: 'Campos vacios',
@@ -37,8 +38,8 @@ export class AddExperienceComponent {
       })
       return
     }
-    const{date, company, position, description} = this
-    const newExperience = {date, company, position, description}
+    const{dateIni, dateFin, company, position, description} = this
+    const newExperience = {dateIni, dateFin, company, position, description}
 
     this.onAddExperience.emit(newExperience);
   }

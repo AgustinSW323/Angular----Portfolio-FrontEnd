@@ -13,7 +13,8 @@ import { text } from '@fortawesome/fontawesome-svg-core';
 export class AddEducationComponent {
   @Output() onAddEducation: EventEmitter<Education> = new EventEmitter();
 
-  date: string = ""
+  dateIni: string = ""
+  dateFin: string = ""
   place: string = ""
   certification: string = ""
   description: string = ""
@@ -28,7 +29,7 @@ export class AddEducationComponent {
    }
 
   onSubmit(){
-    if(!this.date || !this.place || !this.certification || !this.description){
+    if(!this.dateIni || !this.place || !this.certification || !this.description){
       Swal.fire({
         icon: 'warning',
         title: 'Campos vacios',
@@ -38,8 +39,8 @@ export class AddEducationComponent {
       })
       return
     }
-    const{date, place, certification, description} = this
-    const newEducation = {date, place, certification, description}
+    const{dateIni, dateFin, place, certification, description} = this
+    const newEducation = {dateIni, dateFin, place, certification, description}
 
     this.onAddEducation.emit(newEducation);
   }

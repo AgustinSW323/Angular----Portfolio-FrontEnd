@@ -5,13 +5,24 @@
 >
     
     <div class="form-control">
-        <label for="text">Fecha </label>
+        <label for="date">Fecha de Inicio </label>
         <input 
-            type="text" 
-            name="date" 
-            id="date" 
+            type="date" 
+            name="dateIni" 
+            id="dateIni" 
             placeholder="2013-2017"
-            [(ngModel)]="date" 
+            [(ngModel)]="dateIni" 
+        >
+    </div>
+
+    <div class="form-control">
+        <label for="date">Fecha de Finalización </label>
+        <input 
+            type="date" 
+            name="dateFin" 
+            id="dateFin" 
+            placeholder="2013-2017"
+            [(ngModel)]="dateFin" 
         >
     </div>
 
