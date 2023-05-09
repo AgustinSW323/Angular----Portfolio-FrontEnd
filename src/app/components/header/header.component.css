@@ -22,10 +22,15 @@
     display: flex;
     align-items: center;
 
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 500;
     color: var(--primary-color);
 }
+
+.logoHead {
+    width: 40px;
+    vertical-align: middle;
+  }
 
 /* Menu */
 
@@ -37,7 +42,7 @@
 }
 
 .menu li{
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .menu a{
@@ -75,10 +80,14 @@
     color: var(--primary-color);
   }
 
+
 @media(max-width:1090px) {
 
     /* Menu */
     
+    .topnav{
+        padding: 30px;
+    }
     .menu{
         flex-direction: column;
         position: fixed;
